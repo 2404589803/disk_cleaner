@@ -1,48 +1,63 @@
-# 磁盘清理工具
+# Disk Cleaner Tool
 
-这是一个安全的磁盘清理工具，可以帮助您清理磁盘上的旧文件，同时确保系统文件的安全。
+A secure disk cleaning utility designed to help you clean up old files while ensuring system file safety. This tool intelligently identifies and removes unused files while protecting critical system directories.
 
-## 功能特点
+[中文版说明](README_CN.md)
 
-- 安全扫描：自动跳过系统关键目录
-- 智能识别：基于文件访问时间识别长期未使用的文件
-- 空间统计：显示可释放空间大小
-- 安全确认：在执行清理前需要用户确认
-- 详细日志：记录所有清理操作
+## Key Features
 
-## 使用要求
+- **Safe Scanning**: Automatically skips critical system directories
+- **Smart Detection**: Identifies unused files based on last access time
+- **Space Analysis**: Displays recoverable space statistics
+- **Safety Confirmation**: Requires user confirmation before cleanup
+- **Detailed Logging**: Records all cleaning operations
 
-- Python 3.6 或更高版本
-- Windows 操作系统
-- 管理员权限（用于访问某些受保护的目录）
+## Requirements
 
-## 安装步骤
+- Python 3.6 or higher
+- Windows Operating System
+- Administrator privileges (for accessing protected directories)
 
-1. 克隆或下载此仓库
-2. 安装依赖：
+## Installation
+
+1. Clone or download this repository
+2. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-## 使用方法
+## Usage
 
-1. 以管理员身份运行程序：
+1. Run the program as administrator:
    ```
    python disk_cleaner.py
    ```
-2. 输入要清理的目录路径（例如 `C:\`）
-3. 输入要清理的文件年龄（多少天未访问的文件）
-4. 确认清理操作
+2. Enter the directory path to clean (e.g., `C:\`)
+3. Specify the file age (number of days since last access)
+4. Confirm the cleanup operation
 
-## 安全说明
+## Security Features
 
-- 程序会自动跳过系统关键目录
-- 清理前会显示详细的文件列表和大小信息
-- 所有操作都需要用户确认
-- 建议在清理前备份重要数据
+- Automatic protection of system-critical directories
+- Detailed file list and size information before cleanup
+- All operations require user confirmation
+- Backup recommendation before major cleanups
 
-## 注意事项
+## Important Notes
 
-- 请勿在系统运行关键任务时执行清理
-- 建议先在非系统盘测试使用
-- 如果遇到权限问题，请确保以管理员身份运行
+- Avoid running cleanup during critical system operations
+- Test on non-system drives first
+- Run with administrator privileges if permission issues occur
+- Always backup important data before performing cleanup operations
+
+## Safety Guidelines
+
+The tool implements several safety measures:
+- System directory protection
+- User confirmation requirements
+- Detailed operation logging
+- Reversible operations (when possible)
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
